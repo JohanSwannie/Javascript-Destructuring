@@ -1,3 +1,5 @@
+// EXAMPLE 1 - Destructuring
+
 const contentsFolder = [
   {
     contents: {
@@ -53,3 +55,18 @@ for (let i = 0; i < contentsFolder.length; i++) {
   destrDispl1 = `${title} took place on dates ${dates.date1} -- ${dates.date2} -- ${dates.date3} in ${place}`;
   document.getElementById(`destructuring${i + 1}`).innerHTML = destrDispl1;
 }
+
+// EXAMPLE 2 - Destructuring
+
+const [cat, dog, hamster, chicken, horse, sheep] = [
+  "😺",
+  "🐕",
+  "🐹",
+  "🐔",
+  "🐴",
+  "🐏",
+];
+
+let animalString = `Cat - ${cat} - Dog - ${dog} - Hamster - ${hamster} - Chicken - ${chicken} - Horse - ${horse} - Sheep - ${sheep}`;
+
+document.getElementById("destructuring4").innerHTML = animalString;

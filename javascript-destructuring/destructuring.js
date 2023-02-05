@@ -73,11 +73,11 @@ document.getElementById("destructuring4").innerHTML = animalString;
 
 // EXAMPLE 3 - Destructuring
 
-const calculateThem = (v1, v2, v3, v4, v5, v6, v7, v9, v10) => {
+const calculateThem = (v1, v2, v3, v4, v5, v6, v7, v9, v10, v11) => {
   const [a, b, c] = [v1 ** v2 / v3, v4 ** v5 - v6, v7 * v8 + v9];
   document.getElementById(
     `destructuring${v10}`
-  ).innerHTML = `The Value of 'a' is ${a} - The Value of 'b' is ${b} - The Value of 'c' is ${c}`;
+  ).innerHTML = `At ${v11} The Value of 'a' is ${a} - The Value of 'b' is ${b} - The Value of 'c' is ${c}`;
 };
 
 const calcArray1 = [2, 3, 2, 2, 3, 2, 2, 3, 2];
@@ -89,25 +89,33 @@ const calcArray6 = [7, 3, 7, 7, 3, 7, 7, 3, 7];
 
 let v1 = (v2 = v3 = v4 = v5 = v6 = v7 = v8 = v9 = v10 = 0);
 
+let v11 = "";
+
 for (let k = 0; k < 6; k++) {
   if (k === 0) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray1;
     v10 = 5;
+    v11 = "Array 1 -";
   } else if (k == 1) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray2;
     v10 = 6;
+    v11 = "Array2 -";
   } else if (k == 2) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray3;
     v10 = 7;
+    v11 = "Array 3 -";
   } else if (k == 3) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray4;
     v10 = 8;
+    v11 = "Array 4 -";
   } else if (k == 4) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray5;
     v10 = 9;
-  } else if (k == 5) {
+    v11 = "Array 5 -";
+  } else {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray6;
     v10 = 10;
+    v11 = "Array 6 -";
   }
-  calculateThem(v1, v2, v3, v4, v5, v6, v7, v9, v10);
+  calculateThem(v1, v2, v3, v4, v5, v6, v7, v9, v10, v11);
 }

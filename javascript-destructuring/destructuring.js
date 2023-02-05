@@ -70,3 +70,44 @@ const [cat, dog, hamster, chicken, horse, sheep] = [
 let animalString = `Cat - ${cat} - Dog - ${dog} - Hamster - ${hamster} - Chicken - ${chicken} - Horse - ${horse} - Sheep - ${sheep}`;
 
 document.getElementById("destructuring4").innerHTML = animalString;
+
+// EXAMPLE 3 - Destructuring
+
+const calculateThem = (v1, v2, v3, v4, v5, v6, v7, v9, v10) => {
+  const [a, b, c] = [v1 ** v2 / v3, v4 ** v5 - v6, v7 * v8 + v9];
+  document.getElementById(
+    `destructuring${v10}`
+  ).innerHTML = `The Value of 'a' is ${a} - The Value of 'b' is ${b} - The Value of 'c' is ${c}`;
+};
+
+const calcArray1 = [2, 3, 2, 2, 3, 2, 2, 3, 2];
+const calcArray2 = [3, 3, 3, 3, 3, 3, 3, 3, 3];
+const calcArray3 = [4, 3, 4, 4, 3, 4, 4, 3, 4];
+const calcArray4 = [5, 3, 5, 5, 3, 5, 5, 3, 5];
+const calcArray5 = [6, 3, 6, 6, 3, 6, 6, 3, 6];
+const calcArray6 = [7, 3, 7, 7, 3, 7, 7, 3, 7];
+
+let v1 = (v2 = v3 = v4 = v5 = v6 = v7 = v8 = v9 = v10 = 0);
+
+for (let k = 0; k < 6; k++) {
+  if (k === 0) {
+    [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray1;
+    v10 = 5;
+  } else if (k == 1) {
+    [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray2;
+    v10 = 6;
+  } else if (k == 2) {
+    [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray3;
+    v10 = 7;
+  } else if (k == 3) {
+    [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray4;
+    v10 = 8;
+  } else if (k == 4) {
+    [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray5;
+    v10 = 9;
+  } else if (k == 5) {
+    [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray6;
+    v10 = 10;
+  }
+  calculateThem(v1, v2, v3, v4, v5, v6, v7, v9, v10);
+}

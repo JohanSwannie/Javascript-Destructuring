@@ -87,35 +87,27 @@ const calcArray4 = [5, 3, 5, 5, 3, 5, 5, 3, 5];
 const calcArray5 = [6, 3, 6, 6, 3, 6, 6, 3, 6];
 const calcArray6 = [7, 3, 7, 7, 3, 7, 7, 3, 7];
 
-let v1 = (v2 = v3 = v4 = v5 = v6 = v7 = v8 = v9 = v10 = 0);
+let v1 = (v2 = v3 = v4 = v5 = v6 = v7 = v8 = v9 = 0);
+
+let v10 = 4;
 
 let v11 = "";
 
 for (let k = 0; k < 6; k++) {
   if (k === 0) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray1;
-    v10 = 5;
-    v11 = "Array 1 -";
   } else if (k == 1) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray2;
-    v10 = 6;
-    v11 = "Array2 -";
   } else if (k == 2) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray3;
-    v10 = 7;
-    v11 = "Array 3 -";
   } else if (k == 3) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray4;
-    v10 = 8;
-    v11 = "Array 4 -";
   } else if (k == 4) {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray5;
-    v10 = 9;
-    v11 = "Array 5 -";
   } else {
     [v1, v2, v3, v4, v5, v6, v7, v8, v9] = calcArray6;
-    v10 = 10;
-    v11 = "Array 6 -";
   }
+  v10++;
+  v11 = `Array${k + 1} - `;
   calculateThem(v1, v2, v3, v4, v5, v6, v7, v9, v10, v11);
 }

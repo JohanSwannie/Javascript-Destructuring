@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: steelblue;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+p {
+    width: 80rem;
+    height: 8rem;
+    background: crimson;
+    color: #FFF;
+    font-size: 23px;
+    font-weight: Bold;
+    border: 2px solid #FFF;
+    margin-inline: auto;
+    text-align: center;
+    line-height: 4;
+}
